@@ -1,14 +1,10 @@
 <script setup>
-import { ref } from "vue"
+import { ref, computed } from "vue"
 
-const count = ref(0)
-
-function increment(){
-  count.value++
-}
+const name = ref("Alan")
+const type = name.value.type
 </script>
 
 <template>
-  <p>{{ count }}</p>
-  <button @click="increment">click me!</button>
+  <p>{{ type }}</p>
 </template>
